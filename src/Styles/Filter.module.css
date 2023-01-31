@@ -1,0 +1,27 @@
+form {
+  padding-bottom: 1em;
+}
+
+.filterBtn,
+.inputIndex {
+  font-size: 14px;
+  padding: 0.3em 0.5em;
+  border-radius: 10px;
+  border: 2px solid black;
+  margin: 0em 0.5em;
+}
+
+.inputIndex {
+  width: 125px;
+}
+
+.filterBtn {
+  color: black;
+  background-color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.filterBtn:active {
+  box-shadow: 2px 2px 5px black;
+}

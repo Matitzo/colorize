@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import styles from "../Styles/Pagination.module.css";
 
 export default function GetPaginationHtml({
   currentPage,
@@ -6,31 +7,26 @@ export default function GetPaginationHtml({
   onPageChange,
 }) {
   return (
-    <div className="pagination">
-      <Link to={`/?page=${currentPage - 1}`}>
-        <span
-          className={
-            currentPage === 1
-              ? "pagination-arrow invisible"
-              : "pagination-arrow"
-          }
-          onClick={() => onPageChange(currentPage - 1)}
-        >
-          <i className="arrow left"></i>
+    <div className={styles.paginationWraper}>
+      <Link
+        to={`?page=${currentPage - 1}`}
+        onClick={() => onPageChange(currentPage - 1)}
+        className={currentPage === 1 ? styles.invisible : ""}
+      >
+        <span>
+          <i className={`${styles.arrow} ${styles.left}`}></i>
         </span>
       </Link>
 
-      <span className="pagination-pageNumber">{currentPage}</span>
-      <Link to={`/?page=${currentPage + 1}`}>
-        <span
-          className={
-            currentPage === totalPages
-              ? "pagination-arrow invisible"
-              : "pagination-arrow "
-          }
-          onClick={() => onPageChange(currentPage + 1)}
-        >
-          <i className="arrow right"></i>
+      <span className={styles.paginationPageNumber}>{currentPage}</span>
+
+      <Link
+        to={`?page=${currentPage + 1}`}
+        onClick={() => onPageChange(currentPage + 1)}
+        className={currentPage === totalPages ? styles.invisible : ""}
+      >
+        <span>
+          <i className={`${styles.arrow} ${styles.right}`}></i>
         </span>
       </Link>
     </div>

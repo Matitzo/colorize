@@ -1,7 +1,12 @@
-import { Link, useSubmit, Form } from "react-router-dom";
+import { Link } from "react-router-dom";
 import React from "react";
+import styles from "../Styles/Filter.module.css";
 
-export default function GetFiltrHtml({ handleFilter, filter }) {
+export default function GetFiltrHtml({
+  handleFilter,
+  filter,
+  locationPathName,
+}) {
   const [value, setValue] = React.useState("");
 
   function handleClick() {
@@ -11,21 +16,25 @@ export default function GetFiltrHtml({ handleFilter, filter }) {
   return (
     <form>
       <input
+        className={styles.inputIndex}
         id="input"
-        placeholder="Select by id"
+        placeholder="Select product by id"
         type="text"
         name="filterValue"
-        defaultValue={filter.substring(1)}
+        defaultValue={filter}
         onKeyPress={(event) => {
           if (!/[0-9]/.test(event.key)) {
             event.preventDefault();
           }
         }}
-        onChange={(e) => setValue(e.target.value)}
-        min={1}
+        onChange={(e) => setValue(e.target.value ? `${e.target.value}` : "")}
       ></input>
 
-      <Link to={`/${value}`} onClick={() => handleClick()}>
+      <Link
+        className={styles.filterBtn}
+        to={value ? `?id=${value}` : locationPathName}
+        onClick={() => handleClick(value)}
+      >
         Filter
       </Link>
     </form>
