@@ -1,3 +1,5 @@
+import React from "react";
+// @ts-ignore
 import styles from "../Styles/Modal.module.css";
 
 export default function GetModalHtml({ product, isModal, handleModal }) {

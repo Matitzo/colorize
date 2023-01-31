@@ -1,17 +1,21 @@
 import "./App.css";
 import React from "react";
-import GetPaginationHtml from "./Components/Pagination";
-import GetModalHtml from "./Components/Modal";
-import GetFiltrHtml from "./Components/Filter";
-import GetProductsHtml from "./Components/Products";
-import GetNoDataHtml from "./Components/NoDataFound";
 import { useLocation } from "react-router-dom";
-// @ts-check
+// @ts-ignore
+import GetPaginationHtml from "./Components/Pagination.tsx";
+// @ts-ignore
+import GetModalHtml from "./Components/Modal.tsx";
+// @ts-ignore
+import GetFiltrHtml from "./Components/Filter.tsx";
+// @ts-ignore
+import GetProductsHtml from "./Components/Products.tsx";
+// @ts-ignore
+import GetNoDataHtml from "./Components/NoDataFound.tsx";
 
 function App() {
   const location = useLocation();
   const [error, setError] = React.useState("");
-  const [products, setProducts] = React.useState([]);
+  const [products, setProducts] = React.useState<any[]>([]);
 
   const [isModal, setModal] = React.useState(false);
   const [modalProduct, setModalProduct] = React.useState({});
@@ -80,9 +84,9 @@ function App() {
       />
 
       <GetFiltrHtml
-        handleFilter={(value) => setFilter(value)}
         filter={filter}
         locationPathName={location.pathname}
+        setFilter={setFilter}
       />
       <div className="container">
         {products.length >= 1 ? (

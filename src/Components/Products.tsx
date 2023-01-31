@@ -1,3 +1,5 @@
+import React from "react";
+// @ts-ignore
 import styles from "../Styles/Table.module.css";
 
 export default function GetProductsHtml({

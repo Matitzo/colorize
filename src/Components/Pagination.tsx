@@ -1,4 +1,6 @@
+import React from "react";
 import { Link } from "react-router-dom";
+// @ts-ignore
 import styles from "../Styles/Pagination.module.css";
 
 export default function GetPaginationHtml({

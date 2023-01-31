@@ -1,6 +1,12 @@
+import React from "react";
+
 export default function GetNoDataHtml({ error }) {
   return (
-    <div className="products">
+    <div
+      style={{
+        textShadow: `0px 0px 8px whitesmoke`,
+      }}
+    >
       <h1>{error}</h1>
       <h3>
         {error["0"] === "5"
