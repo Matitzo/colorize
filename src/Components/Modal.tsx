@@ -5,30 +5,30 @@ import styles from "../Styles/Modal.module.css";
 export default function GetModalHtml({ product, isModal, handleModal }) {
   return (
     <div
-      className={styles.modal}
+      className={styles["modal"]}
       style={{
         display: `${isModal ? "flex" : "none"}`,
       }}
     >
       <div
-        className={styles.modalWindow}
+        className={styles["modal-window"]}
         style={{
           backgroundColor: `${product.color}`,
         }}
       >
         <h3>Product informations</h3>
-        <span className={styles.close} onClick={() => handleModal()}>
+        <span className={styles["close"]} onClick={() => handleModal()}>
           &times;
         </span>
-        <div className={styles.modalWindowInfo}>
-          <div className={styles.modalWindowInfoHeaders}>
+        <div className={styles["modal-window-info"]}>
+          <div className={styles["modal-window-info-headers"]}>
             <p>Id:</p>
             <p>Name:</p>
             <p>Year:</p>
             <p>Color:</p>
             <p>Pantone Value:</p>
           </div>
-          <div className={styles.modalWindowInfoValues}>
+          <div className={styles["modal-window-info-values"]}>
             <p>{product.id}</p>
             <p>{product.name}</p>
             <p>{product.year}</p>

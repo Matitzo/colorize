@@ -13,7 +13,7 @@
   justify-content: center;
 }
 
-.modalWindow {
+.modal-window {
   margin: 0 auto;
   padding: 1em;
   background-color: whitesmoke;
@@ -21,24 +21,24 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.modalWindowInfo {
+.modal-window-info {
   display: flex;
   padding: 0.8em;
   min-width: 250px;
   justify-content: center;
 }
 
-.modalWindowInfo * {
+.modal-window-info * {
   margin: 0 2px;
 }
 
-.modalWindowInfoHeaders {
+.modal-window-info-headers {
   text-align: right;
   font-weight: bold;
   min-width: 100px;
 }
 
-.modalWindowInfoValues {
+.modal-window-info-values {
   text-align: left;
   min-width: 100px;
 }

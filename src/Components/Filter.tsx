@@ -19,7 +19,7 @@ export default function GetFiltrHtml({ filter, locationPathName, setFilter }) {
   return (
     <form>
       <input
-        className={styles.inputIndex}
+        className={styles["input-index"]}
         id="input"
         placeholder="Select product by id"
         type="text"

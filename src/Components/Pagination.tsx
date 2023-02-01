@@ -9,26 +9,26 @@ export default function GetPaginationHtml({
   onPageChange,
 }) {
   return (
-    <div className={styles.paginationWraper}>
+    <div className={styles["pagination-wraper"]}>
       <Link
         to={`?page=${currentPage - 1}`}
         onClick={() => onPageChange(currentPage - 1)}
-        className={currentPage === 1 ? styles.invisible : ""}
+        className={currentPage === 1 ? styles["invisible"] : ""}
       >
         <span>
-          <i className={`${styles.arrow} ${styles.left}`}></i>
+          <i className={`${styles["arrow"]} ${styles["left"]}`}></i>
         </span>
       </Link>
 
-      <span className={styles.paginationPageNumber}>{currentPage}</span>
+      <span className={styles["pagination-page-number"]}>{currentPage}</span>
 
       <Link
         to={`?page=${currentPage + 1}`}
         onClick={() => onPageChange(currentPage + 1)}
-        className={currentPage === totalPages ? styles.invisible : ""}
+        className={currentPage === totalPages ? styles["invisible"] : ""}
       >
         <span>
-          <i className={`${styles.arrow} ${styles.right}`}></i>
+          <i className={`${styles["arrow"]} ${styles["right"]}`}></i>
         </span>
       </Link>
     </div>
