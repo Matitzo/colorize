@@ -1,8 +1,7 @@
 import React, { useCallback } from "react";
 import { useNavigate } from "react-router";
 import debounce from "lodash.debounce";
-// @ts-ignore
-import styles from "../Styles/Filter.module.css";
+import { StyledInput } from "../Styles/Input.styled";
 
 export default function GetFiltrHtml({ filter, locationPathName, setFilter }) {
   const navigate = useNavigate();
@@ -18,10 +17,9 @@ export default function GetFiltrHtml({ filter, locationPathName, setFilter }) {
 
   return (
     <form>
-      <input
-        className={styles["input-index"]}
+      <StyledInput
         id="input"
-        placeholder="Select product by id"
+        placeholder="Filter product by id"
         type="text"
         name="filterValue"
         defaultValue={filter}
@@ -31,7 +29,7 @@ export default function GetFiltrHtml({ filter, locationPathName, setFilter }) {
           }
         }}
         onChange={debouncedChangeHandler}
-      ></input>
+      ></StyledInput>
     </form>
   );
 }

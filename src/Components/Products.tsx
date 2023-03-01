@@ -1,4 +1,9 @@
 import React from "react";
+import {
+  StyledTable,
+  StyledTableRow,
+  StyledProduct,
+} from "../Styles/Products.styled";
 // @ts-ignore
 import styles from "../Styles/Products.module.css";
 
@@ -13,25 +18,22 @@ export default function GetProductsHtml({
   }
 
   return (
-    <div className={styles["table"]}>
-      <div className={styles["headers"]}>
+    <StyledTable>
+      <StyledTableRow>
         <h4>Id</h4>
         <h4>Name</h4>
         <h4>Year</h4>
-      </div>
+      </StyledTableRow>
       {products.map((product) => (
-        <div
-          className={styles["product"]}
-          style={{
-            backgroundColor: `${product.color}`,
-          }}
+        <StyledProduct
+          color={product.color}
           onClick={() => viewModalProduct(product)}
         >
           <p>{product.id}</p>
           <p>{product.name}</p>
           <p>{product.year}</p>
-        </div>
+        </StyledProduct>
       ))}
-    </div>
+    </StyledTable>
   );
 }

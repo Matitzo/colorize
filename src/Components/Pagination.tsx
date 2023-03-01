@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// @ts-ignore
-import styles from "../Styles/Pagination.module.css";
+import { StyledPaginationDiv, StyledArrow } from "../Styles/Pagination.styled";
 
 export default function GetPaginationHtml({
   currentPage,
@@ -9,28 +8,30 @@ export default function GetPaginationHtml({
   onPageChange,
 }) {
   return (
-    <div className={styles["pagination-wraper"]}>
+    <StyledPaginationDiv>
       <Link
+        style={{
+          visibility: `${currentPage === 1 ? "hidden" : "visible"}`,
+          textDecoration: "none",
+        }}
         to={`?page=${currentPage - 1}`}
         onClick={() => onPageChange(currentPage - 1)}
-        className={currentPage === 1 ? styles["invisible"] : ""}
       >
-        <span>
-          <i className={`${styles["arrow"]} ${styles["left"]}`}></i>
-        </span>
+        <StyledArrow>&#8249;</StyledArrow>
       </Link>
 
-      <span className={styles["pagination-page-number"]}>{currentPage}</span>
+      <span>{currentPage}</span>
 
       <Link
+        style={{
+          visibility: `${currentPage === totalPages ? "hidden" : "visible"}`,
+          textDecoration: "none",
+        }}
         to={`?page=${currentPage + 1}`}
         onClick={() => onPageChange(currentPage + 1)}
-        className={currentPage === totalPages ? styles["invisible"] : ""}
       >
-        <span>
-          <i className={`${styles["arrow"]} ${styles["right"]}`}></i>
-        </span>
+        <StyledArrow>&#8250;</StyledArrow>
       </Link>
-    </div>
+    </StyledPaginationDiv>
   );
 }

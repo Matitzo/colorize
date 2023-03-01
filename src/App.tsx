@@ -1,5 +1,8 @@
-import "./App.css";
 import React from "react";
+import "./App.css";
+import { StyledContainerDiv, StyledMain } from "./App.styled";
+import { StyledHeader } from "./Styles/Header.styled";
+import { StyledFooter } from "./Styles/Footer.styled";
 import { useLocation } from "react-router-dom";
 // @ts-ignore
 import GetPaginationHtml from "./Components/Pagination.tsx";
@@ -76,35 +79,56 @@ function App() {
   }
 
   return (
-    <div className="wrapper">
-      <GetModalHtml
-        product={modalProduct}
-        isModal={isModal}
-        handleModal={() => setModal((prevData) => !prevData)}
-      />
+    <>
+      <StyledHeader>
+        <div className="logo"></div>
+        <div>
+          <div>
+            <h1>Find your color!</h1>
+            <p>
+              Looking to add some color to your home or office? Look no further
+              than our website! We offer a wide variety of high-quality paints
+              in every shade you can imagine. From bold and bright to soft and
+              subtle, we have the perfect color for every space. Our
+              user-friendly website makes it easy to browse and choose your
+              favorite paint products.
+            </p>
+          </div>
+          <div className="image-1"></div>
+        </div>
+      </StyledHeader>
+      <StyledMain>
+        <GetModalHtml
+          product={modalProduct}
+          isModal={isModal}
+          handleModal={() => setModal((prevData) => !prevData)}
+        />
 
-      <GetFiltrHtml
-        filter={filter}
-        locationPathName={location.pathname}
-        setFilter={setFilter}
-      />
-      <div className="container">
-        {products.length >= 1 ? (
-          <GetProductsHtml
-            products={products}
-            setModal={() => setModal((prevData) => !prevData)}
-            setModalProduct={(product) => setModalProduct(product)}
+        <StyledContainerDiv>
+          <h2>Search our products!</h2>
+          <GetFiltrHtml
+            filter={filter}
+            locationPathName={location.pathname}
+            setFilter={setFilter}
           />
-        ) : (
-          <GetNoDataHtml error={error} />
-        )}
-      </div>
-      <GetPaginationHtml
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onPageChange={(page) => setCurrentPage(page)}
-      />
-    </div>
+          {products.length >= 1 ? (
+            <GetProductsHtml
+              products={products}
+              setModal={() => setModal((prevData) => !prevData)}
+              setModalProduct={(product) => setModalProduct(product)}
+            />
+          ) : (
+            <GetNoDataHtml error={error} />
+          )}
+          <GetPaginationHtml
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={(page) => setCurrentPage(page)}
+          />
+        </StyledContainerDiv>
+      </StyledMain>
+      <StyledFooter>To jest footer</StyledFooter>
+    </>
   );
 }
 
