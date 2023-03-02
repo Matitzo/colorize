@@ -25,6 +25,7 @@ export const StyledTable = styled.div`
 export const StyledTableRow = styled.div`
    {
     display: grid;
+    height: 50px;
     grid-template-columns: 33% 33% 33%;
     padding: 0.8em 0;
     border-bottom: 1px solid black;
@@ -34,7 +35,6 @@ export const StyledTableRow = styled.div`
 
 export const StyledProduct = styled(StyledTableRow)`
   background-color: ${({ color }) => color};
-  height: 50px;
   transition: transform 0.2s;
 
   &:hover {

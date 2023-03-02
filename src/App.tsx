@@ -1,9 +1,11 @@
 import React from "react";
 import "./App.css";
 import { StyledContainerDiv, StyledMain } from "./App.styled";
-import { StyledHeader } from "./Styles/Header.styled";
-import { StyledFooter } from "./Styles/Footer.styled";
 import { useLocation } from "react-router-dom";
+// @ts-ignore
+import Header from "./Components/Header.tsx";
+// @ts-ignore
+import Footer from "./Components/Footer.tsx";
 // @ts-ignore
 import GetPaginationHtml from "./Components/Pagination.tsx";
 // @ts-ignore
@@ -80,23 +82,7 @@ function App() {
 
   return (
     <>
-      <StyledHeader>
-        <div className="logo"></div>
-        <div>
-          <div>
-            <h1>Find your color!</h1>
-            <p>
-              Looking to add some color to your home or office? Look no further
-              than our website! We offer a wide variety of high-quality paints
-              in every shade you can imagine. From bold and bright to soft and
-              subtle, we have the perfect color for every space. Our
-              user-friendly website makes it easy to browse and choose your
-              favorite paint products.
-            </p>
-          </div>
-          <div className="image-1"></div>
-        </div>
-      </StyledHeader>
+      <Header />
       <StyledMain>
         <GetModalHtml
           product={modalProduct}
@@ -124,14 +110,9 @@ function App() {
           ) : (
             <GetNoDataHtml error={error} />
           )}
-          {/* <GetPaginationHtml
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={(page) => setCurrentPage(page)}
-          /> */}
         </StyledContainerDiv>
       </StyledMain>
-      <StyledFooter>To jest footer</StyledFooter>
+      <Footer />
     </>
   );
 }

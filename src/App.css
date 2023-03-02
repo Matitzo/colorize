@@ -8,8 +8,8 @@ body {
   min-height: 500px;
   display: flex;
   background-image: url("../public/images/david-pisnoy-46juD4zY1XA-unsplash.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
 }
 
 .logo {
