@@ -9,7 +9,7 @@ export const StyledWraper = styled.div`
 
 export const StyledTable = styled.div`
    {
-    width: 50%;
+    width: 70%;
     margin: 0 2em;
     background-color: rgb(230, 242, 252);
     border: 4px solid black;
@@ -72,6 +72,7 @@ export const StyledArrow = styled.i`
 
 export const StyledSpan = styled.span`
    {
+    font-size: 1.3rem;
     background-color: white;
     box-shadow: 0 0 5px black;
     padding: 0.1em 0.4em;

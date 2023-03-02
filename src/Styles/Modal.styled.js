@@ -30,8 +30,8 @@ export const StyledModalWindow = styled.div`
     font-size: 28px;
     font-weight: bold;
     position: relative;
-    top: -8px;
-    left: 15px;
+    top: -18px;
+    left: 57px;
   }
 
   span:hover,
