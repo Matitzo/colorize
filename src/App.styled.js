@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const StyledMain = styled.main`
    {
-    border: 1px solid red;
     min-width: 250px;
     text-align: center;
   }
@@ -10,7 +9,7 @@ export const StyledMain = styled.main`
 
 export const StyledContainerDiv = styled.div`
    {
-    border: 1px solid black;
+    padding: 1em 0;
     height: 600px;
   }
 `;

@@ -116,15 +116,19 @@ function App() {
               products={products}
               setModal={() => setModal((prevData) => !prevData)}
               setModalProduct={(product) => setModalProduct(product)}
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={(page) => setCurrentPage(page)}
+              leftArrow={true}
             />
           ) : (
             <GetNoDataHtml error={error} />
           )}
-          <GetPaginationHtml
+          {/* <GetPaginationHtml
             currentPage={currentPage}
             totalPages={totalPages}
             onPageChange={(page) => setCurrentPage(page)}
-          />
+          /> */}
         </StyledContainerDiv>
       </StyledMain>
       <StyledFooter>To jest footer</StyledFooter>

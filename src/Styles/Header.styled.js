@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
-  border: 2px solid red;
   margin: 0px;
-  padding: 1em;
+  padding: 3em;
+  background-color: #e0aaff;
 
   div {
     display: flex;
