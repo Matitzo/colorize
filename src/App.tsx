@@ -1,21 +1,19 @@
 import React from "react";
 import "./App.css";
-import { StyledMain } from "./App.styled";
+import { Route, Routes } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+// @ts-ignore
+import Navbar from "./Components/Navbar.tsx";
 // @ts-ignore
 import Header from "./Components/Header.tsx";
 // @ts-ignore
 import Footer from "./Components/Footer.tsx";
 // @ts-ignore
-import GetPaginationHtml from "./Components/Pagination.tsx";
-// @ts-ignore
 import GetModalHtml from "./Components/Modal.tsx";
 // @ts-ignore
-import GetFiltrHtml from "./Components/Filter.tsx";
+import SearchProducts from "./Components/SearchProducts.tsx";
 // @ts-ignore
-import GetProductsHtml from "./Components/Products.tsx";
-// @ts-ignore
-import GetNoDataHtml from "./Components/NoDataFound.tsx";
+import CompareColors from "./Components/CompareColors.tsx";
 
 function App() {
   const location = useLocation();
@@ -87,28 +85,30 @@ function App() {
         isModal={isModal}
         handleModal={() => setModal((prevData) => !prevData)}
       />
+      <Navbar />
       <Header />
-      <StyledMain>
-        <h2>Search our products!</h2>
-        <GetFiltrHtml
-          filter={filter}
-          locationPathName={location.pathname}
-          setFilter={setFilter}
-        />
-        {products.length >= 1 ? (
-          <GetProductsHtml
-            products={products}
-            setModal={() => setModal((prevData) => !prevData)}
-            setModalProduct={(product) => setModalProduct(product)}
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={(page) => setCurrentPage(page)}
-            leftArrow={true}
-          />
-        ) : (
-          <GetNoDataHtml error={error} />
-        )}
-      </StyledMain>
+      <Routes>
+        <Route
+          path={"/Internship-app-1"}
+          element={
+            <SearchProducts
+              filter={filter}
+              setFilter={(value) => setFilter(value)}
+              products={products}
+              setModal={(value) => setModal(value)}
+              setModalProduct={(value) => setModalProduct(value)}
+              currentPage={currentPage}
+              totalPages={totalPages}
+              setCurrentPage={(value) => setCurrentPage(value)}
+              error={error}
+            />
+          }
+        ></Route>
+        <Route
+          path={"/Internship-app-1/compare"}
+          element={<CompareColors />}
+        ></Route>
+      </Routes>
       <Footer />
     </>
   );

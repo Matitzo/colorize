@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledHeader = styled.header`
   margin: 0px;
-  padding: 3em;
+  padding: 1em 3em 3em 3em;
   background-color: #e0aaff;
 
   div {

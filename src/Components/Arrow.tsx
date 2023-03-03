@@ -15,7 +15,13 @@ export default function Arrow({
         textDecoration: "none",
         height: "fit-content",
       }}
-      to={`?page=${leftArrow ? currentPage - 1 : currentPage + 1}`}
+      to={`?page=${
+        leftArrow
+          ? currentPage - 1
+          : currentPage + 1 < pageNumber
+          ? currentPage + 1
+          : pageNumber
+      }`}
       onClick={() =>
         onPageChange(leftArrow ? currentPage - 1 : currentPage + 1)
       }

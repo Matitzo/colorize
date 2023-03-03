@@ -15,6 +15,7 @@ export const StyledArrow = styled.i`
     border: 1px solid white;
     position: relative;
     top: 200px;
+    z-index: 1;
     i {
       position: relative;
       left: ${({ left }) => (left ? "10px" : "-10px")};
