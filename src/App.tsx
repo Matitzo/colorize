@@ -31,7 +31,7 @@ function App() {
   const [currentPage, setCurrentPage] = React.useState(1);
 
   const [colorsArray, setColorsArray] = React.useState<any | []>([]);
-  const [inputColorCode, setInputColorCode] = React.useState("");
+  const [inputColor, setInputColorCode] = React.useState("");
 
   React.useEffect(() => {
     getApi();
@@ -113,7 +113,7 @@ function App() {
             <CompareColors
               colorsArray={colorsArray}
               setColorsArray={(value) => setColorsArray(value)}
-              inputColorCode={inputColorCode}
+              inputColor={inputColor}
               setInputColorCode={(value) => setInputColorCode(value)}
             />
           }

@@ -53,17 +53,36 @@ export const StyledColorDiv = styled.div`
    {
     display: flex;
     justify-content: center;
-    align-items: center;
-    border: 1px solid red;
+    align-items: start;
     background-color: ${({ color }) => color};
     flex-grow: 1;
     
+    p {
+      font-size: 1em;
+      margin-top: 1em;
+      font-weight: bold;
+      padding: 0.2em 0.7em;
+      border-radius: 8px;
+      background-color: whitesmoke;
+    }
 
     &:first-child {
       border-radius: 20px 0 0 20px;
     }
     
     &:last-child {
-        border-radius: 0 20px 20px 0;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
       }
+`;
+
+export const StyledError = styled.p`
+   {
+    margin: 0;
+    font-size: 0.9rem;
+    color: red;
+    position: relative;
+    top: -10px;
+    left: -25px;
+  }
 `;
