@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { StyledContainerDiv, StyledMain } from "./App.styled";
+import { StyledMain } from "./App.styled";
 import { useLocation } from "react-router-dom";
 // @ts-ignore
 import Header from "./Components/Header.tsx";
@@ -82,35 +82,32 @@ function App() {
 
   return (
     <>
+      <GetModalHtml
+        product={modalProduct}
+        isModal={isModal}
+        handleModal={() => setModal((prevData) => !prevData)}
+      />
       <Header />
       <StyledMain>
-        <GetModalHtml
-          product={modalProduct}
-          isModal={isModal}
-          handleModal={() => setModal((prevData) => !prevData)}
+        <h2>Search our products!</h2>
+        <GetFiltrHtml
+          filter={filter}
+          locationPathName={location.pathname}
+          setFilter={setFilter}
         />
-
-        <StyledContainerDiv>
-          <h2>Search our products!</h2>
-          <GetFiltrHtml
-            filter={filter}
-            locationPathName={location.pathname}
-            setFilter={setFilter}
+        {products.length >= 1 ? (
+          <GetProductsHtml
+            products={products}
+            setModal={() => setModal((prevData) => !prevData)}
+            setModalProduct={(product) => setModalProduct(product)}
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={(page) => setCurrentPage(page)}
+            leftArrow={true}
           />
-          {products.length >= 1 ? (
-            <GetProductsHtml
-              products={products}
-              setModal={() => setModal((prevData) => !prevData)}
-              setModalProduct={(product) => setModalProduct(product)}
-              currentPage={currentPage}
-              totalPages={totalPages}
-              onPageChange={(page) => setCurrentPage(page)}
-              leftArrow={true}
-            />
-          ) : (
-            <GetNoDataHtml error={error} />
-          )}
-        </StyledContainerDiv>
+        ) : (
+          <GetNoDataHtml error={error} />
+        )}
       </StyledMain>
       <Footer />
     </>

@@ -35,7 +35,7 @@ export default function GetProductsHtml({
           <StyledTableRow>
             <h4>Id</h4>
             <h4>Name</h4>
-            <h4>Year</h4>
+            <h4>Code</h4>
           </StyledTableRow>
           {products.map((product) => (
             <StyledProduct
@@ -44,7 +44,7 @@ export default function GetProductsHtml({
             >
               <p>{product.id}</p>
               <p>{product.name}</p>
-              <p>{product.year}</p>
+              <p>{product.color}</p>
             </StyledProduct>
           ))}
         </StyledTable>
