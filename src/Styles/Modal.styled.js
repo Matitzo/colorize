@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledModal = styled.div`
   display: none;
   position: fixed;
-  z-index: 2;
+  z-index: 10;
   left: 0;
   top: 0;
   width: 100%;

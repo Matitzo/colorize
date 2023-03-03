@@ -30,6 +30,9 @@ function App() {
   const [totalPages, setTotalPages] = React.useState(1);
   const [currentPage, setCurrentPage] = React.useState(1);
 
+  const [colorsArray, setColorsArray] = React.useState<any | []>([]);
+  const [inputColorCode, setInputColorCode] = React.useState("");
+
   React.useEffect(() => {
     getApi();
   }, [filter, currentPage]);
@@ -106,7 +109,14 @@ function App() {
         ></Route>
         <Route
           path={"/Internship-app-1/compare"}
-          element={<CompareColors />}
+          element={
+            <CompareColors
+              colorsArray={colorsArray}
+              setColorsArray={(value) => setColorsArray(value)}
+              inputColorCode={inputColorCode}
+              setInputColorCode={(value) => setInputColorCode(value)}
+            />
+          }
         ></Route>
       </Routes>
       <Footer />

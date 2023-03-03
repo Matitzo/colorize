@@ -22,7 +22,7 @@ export default function SearchProducts({
   const location = useLocation();
   return (
     <StyledMain>
-      <h2>Search our products!</h2>
+      <h2>Search our products</h2>
       <GetFiltrHtml
         filter={filter}
         locationPathName={location.pathname}
