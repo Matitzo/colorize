@@ -36,12 +36,16 @@ export default function CompareColors({
       ? setColorsArray((prevData) =>
           prevData.length < 5 ? [...prevData, inputColor] : prevData
         )
-      : setInvalidColorMsg(
-          colorsArray.length === 5
-            ? "You can store app to 5 colors"
-            : "Invalid color"
-        );
+      : setInvalidColorMsg("Invalid color");
+    colorsArray.length === 5 &&
+      setInvalidColorMsg("You can store app to 5 colors");
     setInputColorCode("");
+  }
+
+  function removeColor(colorToDel) {
+    setColorsArray((prevData) =>
+      prevData.filter((color) => color !== colorToDel)
+    );
   }
 
   return (
@@ -63,7 +67,10 @@ export default function CompareColors({
       </form>
       <StyledCompare>
         {colorsArray.length > 0 ? (
-          <Colors colors={colorsArray} />
+          <Colors
+            colors={colorsArray}
+            removeColor={(value) => removeColor(value)}
+          />
         ) : (
           <EmptyColorsContainer />
         )}

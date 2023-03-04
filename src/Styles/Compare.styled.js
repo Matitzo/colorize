@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const StyledCompare = styled.div`
    {
@@ -57,13 +58,18 @@ export const StyledColorDiv = styled.div`
     background-color: ${({ color }) => color};
     flex-grow: 1;
     
-    p {
+    div {
       font-size: 1em;
       margin-top: 1em;
       font-weight: bold;
       padding: 0.2em 0.7em;
       border-radius: 8px;
       background-color: whitesmoke;
+
+      span {
+        margin-right: .3em;
+      }
+
     }
 
     &:first-child {
@@ -84,5 +90,13 @@ export const StyledError = styled.p`
     position: relative;
     top: -10px;
     left: -25px;
+  }
+`;
+
+export const StyledFontAwesomeXMark = styled(FontAwesomeIcon)`
+   {
+    &:hover {
+      cursor: pointer;
+    }
   }
 `;
