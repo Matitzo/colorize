@@ -24,27 +24,25 @@ export default function CompareColors({
     return inputColor && validateColor(inputColor) ? true : false;
   }
 
-  // function setErrorMsg(prevData) {
-  //   return prevData.length < 5 ? true : false
-  //   prevData.length === 5 &&
-  //     setInvalidColorMsg("");
-  // }
+  function checkLength(prevData) {
+    return prevData.length < 5
+      ? true
+      : setInvalidColorMsg("You can store app to 5 colors");
+  }
 
   function addColor() {
     setInvalidColorMsg("");
     checkColor()
       ? setColorsArray((prevData) =>
-          prevData.length < 5 ? [...prevData, inputColor] : prevData
+          checkLength(prevData) ? [...prevData, inputColor] : prevData
         )
       : setInvalidColorMsg("Invalid color");
-    colorsArray.length === 5 &&
-      setInvalidColorMsg("You can store app to 5 colors");
     setInputColorCode("");
   }
 
-  function removeColor(colorToDel) {
+  function removeColor(indexToDel) {
     setColorsArray((prevData) =>
-      prevData.filter((color) => color !== colorToDel)
+      prevData.filter((color, index) => index !== indexToDel)
     );
   }
 

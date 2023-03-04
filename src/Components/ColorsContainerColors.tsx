@@ -12,13 +12,13 @@ library.add(faXmark);
 export default function Colors({ colors, removeColor }) {
   return (
     <StyledColorsContainer>
-      {colors.map((color) => (
-        <StyledColorDiv color={color}>
+      {colors.map((color, index) => (
+        <StyledColorDiv key={index} color={color}>
           <div>
             <span>{color}</span>
             <StyledFontAwesomeXMark
               onClick={(e) => {
-                removeColor(color);
+                removeColor(index);
               }}
               icon={"fa-solid fa-xmark" as IconProp}
             />

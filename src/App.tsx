@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router";
 // @ts-ignore
 import Navbar from "./Components/Navbar.tsx";
 // @ts-ignore
@@ -17,6 +18,7 @@ import CompareColors from "./Components/CompareColors.tsx";
 
 function App() {
   const location = useLocation();
+  const navigate = useNavigate();
   const [error, setError] = React.useState("");
   const [products, setProducts] = React.useState<any[]>([]);
 
@@ -29,13 +31,22 @@ function App() {
 
   const [totalPages, setTotalPages] = React.useState(1);
   const [currentPage, setCurrentPage] = React.useState(1);
-
-  const [colorsArray, setColorsArray] = React.useState<any | []>([]);
+  const [colorsArray, setColorsArray] = React.useState<any | []>(
+    location.search.includes("colors")
+      ? location.search.split("=")[1].split(",")
+      : []
+  );
   const [inputColor, setInputColorCode] = React.useState("");
 
   React.useEffect(() => {
     getApi();
   }, [filter, currentPage]);
+
+  React.useEffect(() => {
+    navigate(
+      `${colorsArray.length > 0 ? `?colors=${colorsArray.join(",")}` : "?"}`
+    );
+  }, [colorsArray]);
 
   function getApi() {
     filter ? filteredId() : notFilteredId();
