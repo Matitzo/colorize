@@ -4,7 +4,7 @@ import validateColor from "validate-color";
 import EmptyColorsContainer from "./emptyColorsContainer.tsx";
 // @ts-ignore
 import Colors from "./ColorsContainerColors.tsx";
-import { StyledMain } from "../App.styled";
+import { StyledMainCompare } from "../App.styled";
 import {
   StyledCompare,
   StyledBtn,
@@ -47,7 +47,7 @@ export default function CompareColors({
   }
 
   return (
-    <StyledMain>
+    <StyledMainCompare>
       <h2>Compare colors</h2>
       <form
         onSubmit={(e) => {
@@ -73,6 +73,6 @@ export default function CompareColors({
           <EmptyColorsContainer />
         )}
       </StyledCompare>
-    </StyledMain>
+    </StyledMainCompare>
   );
 }

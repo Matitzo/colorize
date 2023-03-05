@@ -48,6 +48,10 @@ export const StyledColorsContainer = styled.div`
     width: 100%;
     height: 100%;
   }
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 
 export const StyledColorDiv = styled.div`
@@ -57,7 +61,7 @@ export const StyledColorDiv = styled.div`
     align-items: start;
     background-color: ${({ color }) => color};
     flex-grow: 1;
-    
+
     div {
       font-size: 1em;
       margin-top: 1em;
@@ -67,19 +71,27 @@ export const StyledColorDiv = styled.div`
       background-color: whitesmoke;
 
       span {
-        margin-right: .3em;
+        margin-right: 0.3em;
       }
-
     }
 
     &:first-child {
       border-radius: 20px 0 0 20px;
     }
-    
+
     &:last-child {
       border-top-right-radius: 20px;
       border-bottom-right-radius: 20px;
+    }
+
+    @media (max-width: 900px) {
+      &:first-child {
+        border-radius: 20px 20px 0 0;
       }
+      &:last-child {
+        border-radius: 0 0 20px 20px;
+      }
+  }
 `;
 
 export const StyledError = styled.p`

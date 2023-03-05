@@ -28,7 +28,6 @@ function App() {
   const [filter, setFilter] = React.useState(
     !location.search.includes("id") ? "" : location.search.replace(/\D/g, "") // takes only numbers
   );
-
   const [totalPages, setTotalPages] = React.useState(1);
   const [currentPage, setCurrentPage] = React.useState(1);
   const [colorsArray, setColorsArray] = React.useState<any | []>(

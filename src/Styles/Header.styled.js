@@ -17,4 +17,15 @@ export const StyledHeader = styled.header`
       margin-top: 1em;
     }
   }
+
+  @media (max-width: 900px) {
+    div {
+      display: block;
+
+      div {
+        width: 100%;
+        margin: 0.5em 0;
+      }
+    }
+  }
 `;
