@@ -85,11 +85,15 @@ export const StyledColorDiv = styled.div`
     }
 
     @media (max-width: 900px) {
+      border-radius: 0;
+
       &:first-child {
         border-radius: 20px 20px 0 0;
       }
       &:last-child {
-        border-radius: 0 0 20px 20px;
+      border-top-right-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
       }
   }
 `;

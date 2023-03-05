@@ -11,7 +11,7 @@ export const StyledMain = styled.main`
     box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.2);
 
     @media (max-width: 900px) {
-      height: 900px;
+      height: 750px;
     }
   }
 `;
@@ -27,8 +27,8 @@ export const StyledMainCompare = styled.main`
     box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.2);
 
     @media (max-width: 900px) {
-      height: 400px;
-      padding-bottom: 1.5em;
+      height: 420px;
+      padding-bottom: 3em;
     }
   }
 `;

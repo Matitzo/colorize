@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const StyledPaginationDiv = styled.div`
   margin: 0 auto;
-  margin-top: 1em;
 `;
 
 export const StyledArrow = styled.i`

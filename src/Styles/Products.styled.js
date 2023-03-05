@@ -8,8 +8,7 @@ export const StyledWraper = styled.div`
   min-height: 460px;
 
   @media (max-width: 900px) {
-    border: 2px solid red;
-    display: block;
+    min-height: 615px;
   }
 `;
 
@@ -39,8 +38,12 @@ export const StyledArrow = styled.i`
     }
 
     @media (max-width: 900px) {
-      left: ${({ left }) => (left ? "-50px" : "50px")};
-      top: ${({ left }) => (left ? "750px" : "70px")};
+      left: ${({ left }) => (left ? "90px" : "-90px")};
+      top: 622px;
+      i {
+        width: 15px;
+        height: 15px;
+      }
 
       &:hover,
       &:focus {
@@ -78,6 +81,7 @@ export const StyledTableRow = styled.div`
   }
 
   @media (max-width: 900px) {
+    padding: 0.2em 0;
     display: flex;
     flex-direction: column;
     height: 75px;
