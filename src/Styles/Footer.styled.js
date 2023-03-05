@@ -4,7 +4,6 @@ export const StyledFooter = styled.footer`
    {
     padding: 3em;
     background-color: #e0aaff;
-    border: 2px solid red;
   }
 
   p {
