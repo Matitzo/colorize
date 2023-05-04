@@ -32,7 +32,7 @@ export default function Footer() {
         <SocialIcons />
       </StyledFooterFlex>
 
-      <p>&copy; 2021 Colorize. All rights reserved</p>
+      <p>&copy; 2023 Colorize. All rights reserved</p>
     </StyledFooter>
   );
 }
