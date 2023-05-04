@@ -7,13 +7,11 @@ export default function Navbar() {
   return (
     <StyledNavbar>
       <ul>
-        <StyledLi underline={location.pathname === "/Internship-app-1" && true}>
-          <StyledLink to="/Internship-app-1">Search our products</StyledLink>
+        <StyledLi underline={location.pathname === "/colorize" && true}>
+          <StyledLink to="/colorize">Search our products</StyledLink>
         </StyledLi>
-        <StyledLi
-          underline={location.pathname === "/Internship-app-1/compare" && true}
-        >
-          <StyledLink to="/Internship-app-1/compare">Compare colors</StyledLink>
+        <StyledLi underline={location.pathname === "/colorize/compare" && true}>
+          <StyledLink to="/colorize/compare">Compare colors</StyledLink>
         </StyledLi>
       </ul>
     </StyledNavbar>

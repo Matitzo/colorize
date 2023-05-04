@@ -102,7 +102,7 @@ function App() {
       <Header />
       <Routes>
         <Route
-          path={"/Internship-app-1"}
+          path={"/colorize"}
           element={
             <SearchProducts
               filter={filter}
@@ -118,7 +118,7 @@ function App() {
           }
         ></Route>
         <Route
-          path={"/Internship-app-1/compare"}
+          path={"/colorize/compare"}
           element={
             <CompareColors
               colorsArray={colorsArray}
