@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/colorize/static/css/main.50bd471e.css",
+    "main.js": "/colorize/static/js/main.9ed6f08c.js",
+    "static/js/787.28cb0dcd.chunk.js": "/colorize/static/js/787.28cb0dcd.chunk.js",
+    "static/media/paint.jpg": "/colorize/static/media/paint.c33c2b9cc48d571ee3ff.jpg",
+    "static/media/david-pisnoy-46juD4zY1XA-unsplash.jpg": "/colorize/static/media/david-pisnoy-46juD4zY1XA-unsplash.4af9ef9bfda1f3ccba51.jpg",
+    "index.html": "/colorize/index.html",
+    "main.50bd471e.css.map": "/colorize/static/css/main.50bd471e.css.map",
+    "main.9ed6f08c.js.map": "/colorize/static/js/main.9ed6f08c.js.map",
+    "787.28cb0dcd.chunk.js.map": "/colorize/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.50bd471e.css",
+    "static/js/main.9ed6f08c.js"
+  ]
+}
