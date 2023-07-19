@@ -6,6 +6,8 @@ import { useNavigate } from "react-router";
 // @ts-ignore
 import Navbar from "./Components/Navbar.tsx";
 // @ts-ignore
+import Home from "./Components/Home.tsx";
+// @ts-ignore
 import Header from "./Components/Header.tsx";
 // @ts-ignore
 import Footer from "./Components/Footer.tsx";
@@ -99,10 +101,9 @@ function App() {
         handleModal={() => setModal((prevData) => !prevData)}
       />
       <Navbar />
-      <Header />
       <Routes>
         <Route
-          path={"/colorize"}
+          path={"/colorize/products"}
           element={
             <SearchProducts
               filter={filter}
@@ -128,8 +129,8 @@ function App() {
             />
           }
         ></Route>
+        <Route path={"/colorize"} element={<Home />}></Route>
       </Routes>
-      <Footer />
     </>
   );
 }

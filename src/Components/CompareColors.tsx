@@ -1,6 +1,8 @@
 import React from "react";
 import validateColor from "validate-color";
 // @ts-ignore
+import Desc from "./Desc.tsx";
+// @ts-ignore
 import EmptyColorsContainer from "./emptyColorsContainer.tsx";
 // @ts-ignore
 import Colors from "./ColorsContainerColors.tsx";
@@ -48,7 +50,10 @@ export default function CompareColors({
 
   return (
     <StyledMainCompare>
-      <h2>Compare colors</h2>
+      <Desc
+        heading={"Compare colors"}
+        text={"Compare colors by typing colors name, rgb value or hex value."}
+      />
       <form
         onSubmit={(e) => {
           e.preventDefault();

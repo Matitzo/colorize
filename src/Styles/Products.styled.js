@@ -19,6 +19,7 @@ export const StyledArrow = styled.i`
     position: relative;
     top: 200px;
     z-index: 1;
+    border: 1px solid #fff;
     i {
       position: relative;
       left: ${({ left }) => (left ? "10px" : "-10px")};
@@ -54,7 +55,7 @@ export const StyledArrow = styled.i`
 `;
 export const StyledTable = styled.div`
    {
-    width: 70%;
+    width: 60%;
     margin: 0 2em;
     background-color: rgb(230, 242, 252);
     border: 4px solid black;

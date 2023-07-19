@@ -6,8 +6,8 @@ export const StyledCompare = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 70%;
-    height: 80%;
+    width: 60%;
+    height: 100%;
     margin: 0 auto;
     border: 4px solid black;
     border-radius: 25px;
@@ -30,15 +30,26 @@ export const StyledBtn = styled.div`
   }
 `;
 
+export const StyledEmptyContainerWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  margin: 1em;
+`;
+
 export const StyledEmptyContainer = styled.div`
    {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
     border: 4px dashed gray;
     border-radius: 25px;
+  }
+
+  h3 {
+    margin: 0;
   }
 `;
 
@@ -47,6 +58,7 @@ export const StyledColorsContainer = styled.div`
     display: flex;
     width: 100%;
     height: 100%;
+    min-height: calc(400px + 2em + 8px);
   }
 
   @media (max-width: 900px) {
@@ -56,6 +68,8 @@ export const StyledColorsContainer = styled.div`
 
 export const StyledColorDiv = styled.div`
    {
+    min-height: calc(400px + 2em + 8px);
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: start;

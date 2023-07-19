@@ -6,9 +6,18 @@ export default function Navbar() {
   const location = useLocation();
   return (
     <StyledNavbar>
+      <StyledLink to="/colorize">
+        <div className="logo"></div>
+      </StyledLink>
+
       <ul>
         <StyledLi underline={location.pathname === "/colorize" && true}>
-          <StyledLink to="/colorize">Search our products</StyledLink>
+          <StyledLink to="/colorize">Home</StyledLink>
+        </StyledLi>
+        <StyledLi
+          underline={location.pathname === "/colorize/products" && true}
+        >
+          <StyledLink to="/colorize/products">Products</StyledLink>
         </StyledLi>
         <StyledLi underline={location.pathname === "/colorize/compare" && true}>
           <StyledLink to="/colorize/compare">Compare colors</StyledLink>

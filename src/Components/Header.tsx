@@ -4,7 +4,6 @@ import { StyledHeader } from "../Styles/Header.styled";
 export default function Header() {
   return (
     <StyledHeader>
-      <div className="logo"></div>
       <div>
         <div>
           <h1>Find your color!</h1>

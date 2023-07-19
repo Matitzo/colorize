@@ -1,4 +1,6 @@
 import React from "react";
+// @ts-ignore
+import Desc from "./Desc.tsx";
 import { StyledMain } from "../App.styled";
 // @ts-ignore
 import GetFiltrHtml from "./Filter.tsx";
@@ -22,7 +24,10 @@ export default function SearchProducts({
   const location = useLocation();
   return (
     <StyledMain>
-      <h2>Search our products</h2>
+      <Desc
+        heading={"Search our products"}
+        text={"Click product to display more informations."}
+      />
       <GetFiltrHtml
         filter={filter}
         locationPathName={location.pathname}
