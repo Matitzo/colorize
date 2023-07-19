@@ -11,7 +11,13 @@ export default function Navbar() {
       </StyledLink>
 
       <ul>
-        <StyledLi underline={location.pathname === "/colorize" && true}>
+        <StyledLi
+          underline={
+            location.pathname !== "/colorize/products" &&
+            location.pathname !== "/colorize/compare" &&
+            true
+          }
+        >
           <StyledLink to="/colorize">Home</StyledLink>
         </StyledLi>
         <StyledLi
