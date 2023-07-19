@@ -18,7 +18,7 @@ export const StyledNavbar = styled.nav`
 
 export const StyledLi = styled.li`
    {
-    margin: 0 1em;
+    margin-left: 2em;
     list-style: none;
     border-bottom: ${({ underline }) => underline && "3px solid black"};
     font-size: 1.2rem;
