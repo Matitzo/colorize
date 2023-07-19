@@ -19,7 +19,7 @@ export default function GetFiltrHtml({ filter, locationPathName, setFilter }) {
     <form>
       <StyledInput
         id="input"
-        placeholder="Filter product by id"
+        placeholder="Search by id"
         type="text"
         name="filterValue"
         defaultValue={filter}

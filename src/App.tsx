@@ -8,10 +8,6 @@ import Navbar from "./Components/Navbar.tsx";
 // @ts-ignore
 import Home from "./Components/Home.tsx";
 // @ts-ignore
-import Header from "./Components/Header.tsx";
-// @ts-ignore
-import Footer from "./Components/Footer.tsx";
-// @ts-ignore
 import GetModalHtml from "./Components/Modal.tsx";
 // @ts-ignore
 import SearchProducts from "./Components/SearchProducts.tsx";

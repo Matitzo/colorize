@@ -76,6 +76,7 @@ export const StyledLindButton = styled(Link)`
     display: inline-block;
     position: relative;
     transition: 0.5s;
+    font-weight: bold;
   }
 
   span:after {
