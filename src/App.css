@@ -34,8 +34,14 @@ body {
 }
 
 #root {
-  min-width: 400px;
   height: fit-content;
   justify-content: center;
   background-color: white;
+  min-width: 282px;
+}
+
+@media (max-width: 900px) {
+  body {
+    padding: 0 60px;
+  }
 }

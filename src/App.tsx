@@ -13,6 +13,7 @@ import GetModalHtml from "./Components/Modal.tsx";
 import SearchProducts from "./Components/SearchProducts.tsx";
 // @ts-ignore
 import CompareColors from "./Components/CompareColors.tsx";
+import { StyledAppWrapper } from "./App.styled";
 
 function App() {
   const location = useLocation();
@@ -90,7 +91,7 @@ function App() {
   }
 
   return (
-    <>
+    <StyledAppWrapper>
       <GetModalHtml
         product={modalProduct}
         isModal={isModal}
@@ -127,7 +128,7 @@ function App() {
         ></Route>
         <Route path={"/colorize"} element={<Home />}></Route>
       </Routes>
-    </>
+    </StyledAppWrapper>
   );
 }
 

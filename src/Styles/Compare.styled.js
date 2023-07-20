@@ -12,6 +12,10 @@ export const StyledCompare = styled.div`
     border: 4px solid black;
     border-radius: 25px;
     box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.2);
+
+    @media (max-width: 900px) {
+      width: 90%;
+    }
   }
 `;
 
@@ -62,7 +66,6 @@ export const StyledColorsContainer = styled.div`
   }
 
   @media (max-width: 900px) {
-    flex-direction: column;
   }
 `;
 
@@ -98,18 +101,6 @@ export const StyledColorDiv = styled.div`
       border-bottom-right-radius: 20px;
     }
 
-    @media (max-width: 900px) {
-      border-radius: 0;
-
-      &:first-child {
-        border-radius: 20px 20px 0 0;
-      }
-      &:last-child {
-      border-top-right-radius: 0px;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-      }
-  }
 `;
 
 export const StyledError = styled.p`

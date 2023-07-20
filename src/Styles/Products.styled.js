@@ -8,7 +8,8 @@ export const StyledWraper = styled.div`
   min-height: 460px;
 
   @media (max-width: 900px) {
-    min-height: 615px;
+    margin-bottom: 2em;
+    min-height: 500px;
   }
 `;
 
@@ -39,8 +40,9 @@ export const StyledArrow = styled.i`
     }
 
     @media (max-width: 900px) {
-      left: ${({ left }) => (left ? "90px" : "-90px")};
-      top: 622px;
+      position: absolute;
+      left: ${({ left }) => (left ? "calc(50% - 68px)" : "calc(50% + 18px)")};
+      top: 962px;
       i {
         width: 15px;
         height: 15px;
@@ -50,6 +52,14 @@ export const StyledArrow = styled.i`
       &:focus {
         border: none;
       }
+    }
+
+    @media (max-width: 570px) {
+      top: 927px;
+    }
+
+    @media (max-width: 499px) {
+      top: 952px;
     }
   }
 `;
@@ -68,6 +78,7 @@ export const StyledTable = styled.div`
     
     @media (max-width: 900px) {
       margin: 0 auto;
+      width: 100%;
     }
 `;
 
@@ -81,10 +92,13 @@ export const StyledTableRow = styled.div`
     align-items: center;
   }
 
-  @media (max-width: 900px) {
-    padding: 0.2em 0;
+  @media (max-width: 570px) {
     display: flex;
     flex-direction: column;
+  }
+
+  @media (max-width: 900px) {
+    padding: 0.2em 0;
     height: 75px;
   }
 `;
