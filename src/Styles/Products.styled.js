@@ -55,12 +55,11 @@ export const StyledArrow = styled.i`
     }
 
     @media (max-width: 570px) {
-      top: 927px;
+      top: 925px;
     }
 
-    @media (max-width: 499px) {
+    @media (max-width: 512px) {
       top: 952px;
-    }
   }
 `;
 export const StyledTable = styled.div`
@@ -90,11 +89,6 @@ export const StyledTableRow = styled.div`
     padding: 0.8em 0;
     border-bottom: 1px solid black;
     align-items: center;
-  }
-
-  @media (max-width: 570px) {
-    display: flex;
-    flex-direction: column;
   }
 
   @media (max-width: 900px) {
