@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 export const StyledNavbar = styled.nav`
   background-color: white;
-  color: white;
   font-weight: bold;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: 1.5em;
   margin-bottom: 6em;
 

@@ -13,6 +13,8 @@ import GetModalHtml from "./Components/Modal.tsx";
 import SearchProducts from "./Components/SearchProducts.tsx";
 // @ts-ignore
 import CompareColors from "./Components/CompareColors.tsx";
+// @ts-ignore
+import Menu from "./Components/Menu.tsx";
 import { StyledAppWrapper } from "./App.styled";
 
 function App() {
@@ -35,6 +37,7 @@ function App() {
       : []
   );
   const [inputColor, setInputColorCode] = React.useState("");
+  const [toggleHamburger, setToggleHamburger] = React.useState<boolean>(false);
 
   React.useEffect(() => {
     getApi();
@@ -97,7 +100,15 @@ function App() {
         isModal={isModal}
         handleModal={() => setModal((prevData) => !prevData)}
       />
-      <Navbar />
+      <Menu
+        toggleHamburger={toggleHamburger}
+        setToggleHamburger={(value) => setToggleHamburger(value)}
+      />
+
+      <Navbar
+        toggleHamburger={toggleHamburger}
+        setToggleHamburger={(value) => setToggleHamburger(value)}
+      />
       <Routes>
         <Route
           path={"/colorize/products"}

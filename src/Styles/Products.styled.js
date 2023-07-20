@@ -58,6 +58,11 @@ export const StyledArrow = styled.i`
       top: 957px;
     }
 
+    @media (max-width: 400px) {
+      top: 957px;
+      left: ${({ left }) => (left ? "133px" : "218px")};
+    }
+
 `;
 export const StyledTable = styled.div`
    {

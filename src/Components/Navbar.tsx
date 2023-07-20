@@ -1,34 +1,39 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
-import { StyledNavbar, StyledLi, StyledLink } from "../Styles/Navbar.styled";
+import { useState, useEffect } from "react";
+import { StyledNavbar, StyledLink } from "../Styles/Navbar.styled";
+// @ts-ignore
+import Navigation from "./Navigation.tsx";
+// @ts-ignore
+import Hamburger from "./Hamburger.tsx";
 
-export default function Navbar() {
-  const location = useLocation();
+export default function Navbar({ toggleHamburger, setToggleHamburger }) {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowWidth(window.innerWidth);
+      window.innerWidth > 580 && setToggleHamburger(false);
+    };
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
   return (
     <StyledNavbar>
       <StyledLink to="/colorize">
         <div className="logo"></div>
       </StyledLink>
-
-      <ul>
-        <StyledLi
-          underline={
-            location.pathname !== "/colorize/products" &&
-            location.pathname !== "/colorize/compare" &&
-            true
-          }
-        >
-          <StyledLink to="/colorize">Home</StyledLink>
-        </StyledLi>
-        <StyledLi
-          underline={location.pathname === "/colorize/products" && true}
-        >
-          <StyledLink to="/colorize/products">Products</StyledLink>
-        </StyledLi>
-        <StyledLi underline={location.pathname === "/colorize/compare" && true}>
-          <StyledLink to="/colorize/compare">Compare colors</StyledLink>
-        </StyledLi>
-      </ul>
+      {windowWidth >= 580 ? (
+        <Navigation />
+      ) : (
+        <Hamburger
+          toggleHamburger={toggleHamburger}
+          setToggleHamburger={(value) => setToggleHamburger(value)}
+        />
+      )}
     </StyledNavbar>
   );
 }
