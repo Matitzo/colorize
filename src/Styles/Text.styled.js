@@ -19,6 +19,7 @@ export const StyledParagraph = styled.p`
   margin-bottom: 2.5em;
   line-height: 155%;
   font-size: 1.25rem;
+  min-height: 60px;
 
   @media (max-width: 570px) {
     font-size: 1.1rem;

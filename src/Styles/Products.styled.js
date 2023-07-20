@@ -42,7 +42,7 @@ export const StyledArrow = styled.i`
     @media (max-width: 900px) {
       position: absolute;
       left: ${({ left }) => (left ? "calc(50% - 68px)" : "calc(50% + 18px)")};
-      top: 962px;
+      top: 992px;
       i {
         width: 15px;
         height: 15px;
@@ -55,12 +55,9 @@ export const StyledArrow = styled.i`
     }
 
     @media (max-width: 570px) {
-      top: 925px;
+      top: 957px;
     }
 
-    @media (max-width: 512px) {
-      top: 952px;
-  }
 `;
 export const StyledTable = styled.div`
    {
