@@ -19,18 +19,30 @@ export const StyledCompare = styled.div`
   }
 `;
 
+export const StyledForm = styled.form`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5em;
+`;
+
 export const StyledBtn = styled.div`
    {
     margin-left: 1em;
+    padding: 8px;
     display: inline-block;
     width: 25px;
     height: 25px;
     border: 1px solid black;
     border-radius: 50%;
+    font-size: 2rem;
+    line-height: 1.2rem;
   }
 
   &:hover {
     cursor: pointer;
+    border: 1px solid grey;
+    color: grey;
   }
 `;
 
@@ -106,11 +118,10 @@ export const StyledColorDiv = styled.div`
 export const StyledError = styled.p`
    {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    font-weight: bold;
     color: red;
-    position: relative;
-    top: -10px;
-    left: -25px;
+    margin-bottom: 1.3em;
   }
 `;
 

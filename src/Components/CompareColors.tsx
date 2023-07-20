@@ -11,6 +11,7 @@ import {
   StyledCompare,
   StyledBtn,
   StyledError,
+  StyledForm,
 } from "../Styles/Compare.styled";
 import { StyledInput } from "../Styles/Input.styled";
 
@@ -54,7 +55,7 @@ export default function CompareColors({
         heading={"Compare colors"}
         text={"Compare colors by typing colors name, rgb value or hex value."}
       />
-      <form
+      <StyledForm
         onSubmit={(e) => {
           e.preventDefault();
           addColor();
@@ -66,8 +67,8 @@ export default function CompareColors({
           onChange={(e) => setInputColorCode(e.target.value)}
         ></StyledInput>
         <StyledBtn onClick={() => addColor()}>+</StyledBtn>
-        {invalidColorMsg && <StyledError>{invalidColorMsg}</StyledError>}
-      </form>
+      </StyledForm>
+      {invalidColorMsg && <StyledError>{invalidColorMsg}</StyledError>}
       <StyledCompare>
         {colorsArray.length > 0 ? (
           <Colors
