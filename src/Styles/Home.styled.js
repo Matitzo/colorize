@@ -12,16 +12,55 @@ export const StyledHomeFlexWrapperDiv = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 32px;
+
+  @media (max-width: 730px) {
+    flex-direction: column;
+  }
 `;
 
 export const StyledHomeFlexImgWrapperDiv = styled(StyledHomeFlexWrapperDiv)`
   width: calc(50% - 16px);
   margin: 0;
+
+  @media (max-width: 1070px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 730px) {
+    flex-direction: row;
+    width: 100%;
+    height: 200px;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    height: 500px;
+    gap: 32px;
+  }
 `;
 
 export const StyledHomeIntroContainerDiv = styled.div`
   width: calc(50% - 16px);
   height: 500px;
+
+  @media (max-width: 1160px) {
+    p {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 970px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (max-width: 730px) {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 3em;
+  }
 `;
 
 export const StyledImgContainer = styled.div`
@@ -48,14 +87,60 @@ export const StyledImgContainer = styled.div`
     width: calc(100% - 1.6em);
     min-height: 50px;
   }
+
+  @media (max-width: 1320px) {
+    div {
+      min-height: 80px;
+    }
+  }
+
+  @media (max-width: 1160px) {
+    div {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 1070px) {
+    div {
+      min-height: 50px;
+    }
+  }
 `;
 
 export const StyledImgContainer1 = styled(StyledImgContainer)`
   background-image: url(${img1});
+
+  @media (max-width: 1070px) {
+    width: 100%;
+    height: calc(50% - 16px);
+  }
+
+  @media (max-width: 730px) {
+    width: calc(50% - 16px);
+    height: 100%;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 export const StyledImgContainer2 = styled(StyledImgContainer)`
   background-image: url(${img2});
+
+  @media (max-width: 1070px) {
+    width: 100%;
+    height: calc(50% - 16px);
+  }
+
+  @media (max-width: 730px) {
+    width: calc(50% - 16px);
+    height: 100%;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 export const StyledImgContainer3 = styled(StyledImgContainer)`
@@ -103,13 +188,24 @@ export const StyledHomeBottomContainerDiv = styled.div`
   height: 171px;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 730px) {
+    flex-direction: column;
+    height: fit-content;
+    gap: 32px;
+  }
+
+  @media (max-width: 600px) {
+    div:last-child {
+      height: 234px;
+    }
+  }
 `;
 
 export const StyledHomeBoxContainerDiv = styled.div`
   border: 2px solid black;
   border-radius: 8px;
   width: calc(50% - 16px);
-  max-width: calc(50% - 16px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,6 +213,21 @@ export const StyledHomeBoxContainerDiv = styled.div`
 
   h3 {
     font-size: 2rem;
+  }
+
+  @media (max-width: 1160px) {
+    h3 {
+      font-size: 1.7rem;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 730px) {
+    width: 100%;
+    height: 174px;
   }
 `;
 
